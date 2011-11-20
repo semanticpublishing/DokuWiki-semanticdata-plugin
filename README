@@ -1,0 +1,27 @@
+Semantic data plugin for DokuWiki
+17-11-2011
+www.semanticpublishing.nl
+
+The Semantic data plugin for DokuWiki is based on the data plugin (http://www.dokuwiki.org/plugin:data). The underlying sqlite database has been replaced by a SPARQL 1.1 compliant triple store. This has several advantages:
+
+- Performace has increased substantially. As a consequence the plugin can be used as a replacement for the data plugin. Be aware that only the basic functionality has been implemented. Aliases, related pages and tag cloud are not supported in this release.
+- A knowledge model can be defined on top of the metada, relating metadata. In this way, metadata that is automatically inferred by the triple store is included in the query results.
+
+If you want more information please contact us at info@semanticpublishing.nl
+
+
+Prequisites: Sesame 2.6.0 triple store. http://www.openrdf.org
+
+Please follow the instructions at  http://www.openrdf.org for installing the triple store. You have to setup a repository for dokuwiki to use. Remember the url for access to the repository, e.g. http://localhost:8080/openrdf-sesame/repositories/dokuwiki
+
+NOTICE: The plugin cannot be used together with the sqlite based data plugin!
+
+For installing the plugin, we refer to the DokuWiki documentation. If you install this plugin manually, make sure it is installed in lib/plugins/data/ - if the folder is called different it will not work!
+
+In the admin section of the plugin you can change two settings:
+1. The url of Sesame installation: default to http://localhost:8080/openrdf-sesame
+2. The name of the repository, default: dokuwiki
+2. The namespace for the data: default to http://www.semanticpublishing.eu/dokuwiki#
+
+
+

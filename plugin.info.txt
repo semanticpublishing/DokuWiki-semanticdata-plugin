@@ -1,0 +1,8 @@
+base    semanticdata
+author  Semantic Publishing
+email   info@semanticpublishing.nl
+date    2011-11-17
+name    Semantic Data Plugin
+desc    Add and query semantic data in your wiki
+url     http://www.dokuwiki.org/plugin:semanticdata
+
