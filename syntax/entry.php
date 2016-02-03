@@ -54,7 +54,7 @@ class syntax_plugin_semanticdata_entry extends DokuWiki_Syntax_Plugin {
 	/**
 	 * Handle the match - parse the data
 	 */
-	function handle($match, $state, $pos, &$handler){
+	function handle($match, $state, $pos, Doku_Handler $handler){
 		// get lines
 		$lines = explode("\n",$match);
 		array_pop($lines);
@@ -101,7 +101,7 @@ class syntax_plugin_semanticdata_entry extends DokuWiki_Syntax_Plugin {
 	/**
 	 * Create output or save the data
 	 */
-	function render($format, &$renderer, $data) {
+	function render($format, Doku_Renderer $renderer, $data) {
 		global $ID;
 		switch ($format){
 			case 'xhtml':
